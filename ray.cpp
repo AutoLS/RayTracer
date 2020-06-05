@@ -130,7 +130,7 @@ RayIntersection(world* World,
 			{
 				v3 P = RayOrigin + t*RayDir;
 				real32 Distance = Length(P - Disk.P);
-				if(Distance < Disk.r)
+				if(Distance <= Disk.r)
 				{
 					Result.t = t;
 					Result.HitIndex = Disk.MatIndex;
