@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <direct.h>
 
-#include <AE/math.h>
+#include "AE/math.h"
 #include "ray.h"
 
 #pragma pack(push, 1)
