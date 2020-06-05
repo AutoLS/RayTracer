@@ -367,6 +367,7 @@ int main(int ArgCount, char** Args)
 							V4(FilmX, FilmY, 1));
 				
 				v3 Color = RayTrace(Origin, Dir, &World, 1.0f, FLT_MAX, 3);
+				// With gamma correction
 				// v4 BMPValue = 
 				// {
 					// 255.0f*ExactLinearTosRGB(Color.x),
@@ -375,6 +376,8 @@ int main(int ArgCount, char** Args)
 					// 255.0f
 				// };
 				// *Pixels++ = RGBAPack4x8(BMPValue);
+				
+				// Without gamma correction
 				*Pixels++ = RGBAPack4x8(V4(Color * 255.0f, 255.0f));
 			}
 			
