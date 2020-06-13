@@ -83,8 +83,8 @@ void FillImage(image* Image, int R, int G, int B)
 
 intersection_result 
 RayIntersection(world* World, 
-					v3 RayOrigin, v3 RayDir, 
-					real32 t_min, real32 t_max)
+		v3 RayOrigin, v3 RayDir, 
+		real32 t_min, real32 t_max)
 {
 	intersection_result Result = {};
 	Result.t = FLT_MAX;
@@ -197,7 +197,7 @@ real32 ComputeLight(world* World, v3 P, v3 N, real32 Shininess)
 }
 
 v3 RayTrace(v3 RayOrigin, v3 RayDir, world* World, 
-			real32 t_min, real32 t_max, int Depth)
+	    real32 t_min, real32 t_max, int Depth)
 {
 	v3 LocalColor = {}, ReflectColor = {};
 	real32 r;
